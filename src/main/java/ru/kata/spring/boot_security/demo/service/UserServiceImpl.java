@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> user = userRepository.findByUsername(username);
         if (user.isEmpty()){
-            throw new UsernameNotFoundException("User ");
+            throw new UsernameNotFoundException("User not found");
         }
         return user.get();
     }
