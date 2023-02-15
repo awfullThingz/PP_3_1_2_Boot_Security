@@ -4,7 +4,11 @@
     <title>Spring Security Example</title>
 </head>
 <body>
-<h1>Welcome to Index PAGE!</h1>
+<h1>Welcome!</h1>
+
+<form th:method="POST" th:action="@{/login}">
+    <input type="submit" value="Login">
+</form>
 
 
 </body>
